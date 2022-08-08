@@ -423,33 +423,33 @@
 				let data1 = sliceData(start1, start1 + len1);
 				let uplot1 = new uPlot(opts, data1, document.body);
 				console.log(uplot1);
-				setInterval(function() {
-					len1 += 10;
-					let data1 = sliceData(start1, start1 + len1);
-					//console.log(uplot1.scales['%'].min, uplot1.scales['%'].max);
-					let range = []
-					for(var element in uplot1.scales) {
-						range.push([element.min, element.max]);
-					};
-					//uplot1.setData(data1,false);
-					if(uplot1.data[0][0] !== uplot1.scales.x.min || uplot1.data[0][uplot1.data[0].length-1] !== uplot1.scales.x.max){
-						//uplot1.setScale('x', {min:uplot1.data[0][0], max:uplot1.data[0][uplot1.data[0].length-1]});
-						uplot1.setData(data1,false);
-					}else{
-						uplot1.setData(data1);
-					}
-					// let i = 0;
-					// for(let key in uplot1.scales) {
-					// 	if(key!="x"){
-					// 		uplot1.scales[key].min = range[i][0];
-					// 		uplot1.scales[key].max = range[i][1];
-					// 		uplot1.scales[key].range = range[i];
-					// 		console.log(uplot1.scales[key]);
-					// 	}
+				// setInterval(function() {
+				// 	len1 += 10;
+				// 	let data1 = sliceData(start1, start1 + len1);
+				// 	//console.log(uplot1.scales['%'].min, uplot1.scales['%'].max);
+				// 	let range = []
+				// 	for(var element in uplot1.scales) {
+				// 		range.push([element.min, element.max]);
+				// 	};
+				// 	//uplot1.setData(data1,false);
+				// 	if(uplot1.data[0][0] !== uplot1.scales.x.min || uplot1.data[0][uplot1.data[0].length-1] !== uplot1.scales.x.max){
+				// 		//uplot1.setScale('x', {min:uplot1.data[0][0], max:uplot1.data[0][uplot1.data[0].length-1]});
+				// 		uplot1.setData(data1,false);
+				// 	}else{
+				// 		uplot1.setData(data1);
+				// 	}
+				// 	// let i = 0;
+				// 	// for(let key in uplot1.scales) {
+				// 	// 	if(key!="x"){
+				// 	// 		uplot1.scales[key].min = range[i][0];
+				// 	// 		uplot1.scales[key].max = range[i][1];
+				// 	// 		uplot1.scales[key].range = range[i];
+				// 	// 		console.log(uplot1.scales[key]);
+				// 	// 	}
 						
-					// 	i++;
-					// };
-				}, interval);
+				// 	// 	i++;
+				// 	// };
+				// }, interval);
 
 
 				const opts2 = {
